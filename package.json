@@ -1,0 +1,24 @@
+{
+  "name": "philippine-administrative-divisions",
+  "version": "1.0.0",
+  "description": "Regions, Provinces, Municipalities and cities, and barangays of the Philippines",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/barudo/philippine-administrative-divisions"
+  },
+  "keywords": [
+    "Philippines",
+    "regions",
+    "provinces",
+    "municipalities",
+    "and",
+    "cities",
+    "barangays"
+  ],
+  "author": "Justin Villocido <barudo@gmail.com>",
+  "license": "MIT"
+}
