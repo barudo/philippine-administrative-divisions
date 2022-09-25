@@ -16,19 +16,28 @@ These are the functions available for this package:
 
 Will provide the regions and their name.
 
-`getRegions()`
+```javascript
+const { getRegions } = require('philippine-administrative-divisions')
+getRegions()
+```
 
 ### getProvinces
 
 Will provide an array of all the provinces.
 
-`getProvinces()`
+```javascript
+const { getProvinces } = require('philippine-administrative-divisions')
+getProvinces()
+```
 
 ### getProvincesByRegionName
 
 Will provide an array of all provinces in the region
 
-`getProvincesByRegionName('REGION VII')`
+```javascript
+const { getProvincesByRegionName } = require('philippine-administrative-divisions')
+getProvincesByRegionName('REGION VII')
+```
 
 This example will return an array containing: `Cebu, Bohol, Siquijor and Negros Oriental`
 
@@ -38,7 +47,10 @@ Note: Region name is not case sensitive.
 
 Will provide an array of all municipalities in a Province
 
-`getMunicipalitiesByProvince('BOHOL')`
+```javascript
+const { getMunicipalitiesByProvince } = require('philippine-administrative-divisions')
+getMunicipalitiesByProvince('BOHOL')
+```
 
 Note: Province is not case sensitive.
 
@@ -46,14 +58,13 @@ Note: Province is not case sensitive.
 
 Will provide all the barangays of the municipality in that province.
 
-`getBarangaysByProvinceAndMunicipality('BOHOL', 'ALBURQUERQUE')`
+```javascript
+const { getBarangaysByProvinceAndMunicipality } = require('philippine-administrative-divisions')
+getBarangaysByProvinceAndMunicipality('BOHOL', 'ALBURQUERQUE')
+```
 
 Note: both province and municipality are NOT case sensitive.
 
 ## License
 
 MIT
-
-
-
-
