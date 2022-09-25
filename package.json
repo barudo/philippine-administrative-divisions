@@ -4,7 +4,7 @@
   "description": "Regions, Provinces, Municipalities and cities, and barangays of the Philippines",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose ./tests"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
     "barangays"
   ],
   "author": "Justin Villocido <barudo@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
 }
