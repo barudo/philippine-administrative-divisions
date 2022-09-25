@@ -9,7 +9,7 @@ function _loadData(file) {
 
 function getRegions() {
   let regions = _loadData('regions')
-  regions = regions.map(region => region.name)
+  regions = regions.map((region) => region.name)
   return regions
 }
 
@@ -21,8 +21,8 @@ function getProvinces() {
 
 function getProvincesByRegionName(region) {
   const regions = _loadData('regions')
-  const dregion = regions.find(dregion => dregion.name === region)
-  if(dregion) {
+  const dregion = regions.find((dregion) => dregion.name === region)
+  if (dregion) {
     return dregion.provinces
   } else {
     return false
@@ -31,7 +31,7 @@ function getProvincesByRegionName(region) {
 
 function getMunicipalitiesByProvince(province) {
   const provinces = _loadData('provinces')
-  if(provinces[province]) {
+  if (provinces[province]) {
     let municipalities = Object.keys(provinces[province].municipalities)
     return municipalities
   } else {
@@ -39,10 +39,12 @@ function getMunicipalitiesByProvince(province) {
   }
 }
 
+function getBarangaysByProvinceAndMunicipality(province, municipality) {}
 
 module.exports = {
-  getRegions,
+  getBarangaysByProvinceAndMunicipality,
+  getMunicipalitiesByProvince,
   getProvinces,
   getProvincesByRegionName,
-  getMunicipalitiesByProvince
+  getRegions,
 }
