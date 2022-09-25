@@ -20,6 +20,7 @@ function getProvinces() {
 }
 
 function getProvincesByRegionName(region) {
+  region = region.toUpperCase()
   const regions = _loadData('regions')
   const dregion = regions.find((dregion) => dregion.name === region)
   if (dregion) {
@@ -30,6 +31,7 @@ function getProvincesByRegionName(region) {
 }
 
 function getMunicipalitiesByProvince(province) {
+  province = province.toUpperCase()
   const provinces = _loadData('provinces')
   if (provinces[province]) {
     let municipalities = Object.keys(provinces[province].municipalities)
@@ -39,7 +41,17 @@ function getMunicipalitiesByProvince(province) {
   }
 }
 
-function getBarangaysByProvinceAndMunicipality(province, municipality) {}
+function getBarangaysByProvinceAndMunicipality(province, municipality) {
+  province = province.toUpperCase()
+  municipality = municipality.toUpperCase()
+  const municipalities = getMunicipalitiesByProvince(province)
+  if (!municipalities || !municipalities.indexOf(municipality) < 0) {
+    return false
+  }
+  const provinces = _loadData('provinces')
+  const barangays = provinces[province].municipalities[municipality].barangays
+  return barangays
+}
 
 module.exports = {
   getBarangaysByProvinceAndMunicipality,

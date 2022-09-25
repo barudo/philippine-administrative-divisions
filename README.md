@@ -6,6 +6,8 @@ The Philippines is divided into regions; regions are divided into provinces; pro
 
 ## Installation
 
+`npm install philippine-administrative-divisions`
+
 ## Functions
 
 These are the functions available for this package:
@@ -14,20 +16,44 @@ These are the functions available for this package:
 
 Will provide the regions and their name.
 
-Ex.
 `getRegions()`
 
 ### getProvinces
 
 Will provide an array of all the provinces.
 
-Ex.
 `getProvinces()`
 
-`getProvincesByRegionName`
+### getProvincesByRegionName
 
-`getMunicipalitiesByProvince`
+Will provide an array of all provinces in the region
 
-`getBarangaysByProvinceAndMunicipality`
+`getProvincesByRegionName('REGION VII')`
+
+This example will return an array containing: `Cebu, Bohol, Siquijor and Negros Oriental`
+
+Note: Region name is not case sensitive.
+
+### getMunicipalitiesByProvince
+
+Will provide an array of all municipalities in a Province
+
+`getMunicipalitiesByProvince('BOHOL')`
+
+Note: Province is not case sensitive.
+
+### getBarangaysByProvinceAndMunicipality
+
+Will provide all the barangays of the municipality in that province.
+
+`getBarangaysByProvinceAndMunicipality('BOHOL', 'ALBURQUERQUE')`
+
+Note: both province and municipality are NOT case sensitive.
+
+## License
+
+MIT
+
+
 
 
