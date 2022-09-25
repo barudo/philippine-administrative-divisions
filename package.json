@@ -1,6 +1,6 @@
 {
   "name": "philippine-administrative-divisions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Regions, Provinces, Municipalities and cities, and barangays of the Philippines",
   "main": "index.js",
   "scripts": {
