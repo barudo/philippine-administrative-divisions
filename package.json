@@ -1,11 +1,12 @@
 {
   "name": "philippine-administrative-divisions",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Regions, Provinces, Municipalities and cities, and barangays of the Philippines",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --verbose",
-    "build": "tsc"
+    "copy-json": "copyfiles -u 1 src/**/*.json dist",
+    "build": "tsc && npm run copy-json"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.9.3",
+    "copyfiles": "^2.4.1",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",

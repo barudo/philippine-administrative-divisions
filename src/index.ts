@@ -5,7 +5,7 @@ import { IRegion, IProvinces } from './index.d';
 
 function _loadData(file: string): IRegion[] | IProvinces {
   const rawData: Buffer = fs.readFileSync(
-    path.resolve(__dirname, `../${file}.json`),
+    path.resolve(__dirname, `./${file}.json`),
   );
   return JSON.parse(rawData.toString());
 }
